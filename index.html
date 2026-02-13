@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>طلب تمويل سريع في تونس</title>
+  <meta name="description" content="قدم طلب تمويل أونلاين في تونس. التسجيل مجاني ويأخذ أقل من 3 دقائق." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --card:#f8fafc;
+      --border:#e2e8f0;
+      --green:#166534;
+      --green2:#15803d;
+      --red:#b91c1c;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius:18px;
+      --max: 980px;
+      --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans Arabic", "Noto Kufi Arabic", sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background:linear-gradient(180deg,#ffffff 0%, #f8fafc 100%);
+      color:var(--text);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:18px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:10px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:42px; height:42px; border-radius:12px;
+      background: radial-gradient(circle at 30% 30%, #22c55e 0%, #16a34a 40%, #0f766e 100%);
+      box-shadow: var(--shadow);
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--border); background:#fff;
+      color:var(--muted); font-size:13px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:10px;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+    }
+    .card{
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .heroMedia{
+      min-height:320px;
+      background:
+        linear-gradient(180deg, rgba(2,6,23,.0) 0%, rgba(2,6,23,.18) 100%),
+        url('HEADER_IMAGE_URL_HERE') center/cover no-repeat;
+      position:relative;
+    }
+    .badge{
+      position:absolute; top:14px; right:14px;
+      background:#fff; border:1px solid var(--border);
+      padding:8px 12px; border-radius:999px; font-size:13px; color:var(--muted);
+      display:flex; align-items:center; gap:8px;
+    }
+    .badge b{color:var(--text)}
+    .heroBody{padding:22px}
+    h1{
+      margin:0 0 10px;
+      font-size:34px;
+      line-height:1.2;
+      letter-spacing:-.3px;
+    }
+    .sub{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.7;
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:16px 0 0}
+    .btn{
+      appearance:none; border:0; cursor:pointer;
+      background:var(--green2); color:#fff;
+      padding:12px 16px; border-radius:14px;
+      font-weight:800; font-size:16px;
+      box-shadow: 0 10px 22px rgba(22,163,74,.25);
+      transition: transform .08s ease, opacity .2s ease;
+      text-decoration:none;
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      min-height:46px;
+    }
+    .btn:hover{opacity:.96}
+    .btn:active{transform:translateY(1px)}
+    .btn.secondary{
+      background:#fff; color:var(--text);
+      border:1px solid var(--border);
+      box-shadow:none;
+      font-weight:700;
+    }
+    .grid2{
+      display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;
+    }
+    @media (max-width: 520px){
+      h1{font-size:28px}
+      .grid2{grid-template-columns:1fr}
+    }
+    .feat{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px; border:1px solid var(--border); border-radius:14px;
+      background:#fff;
+    }
+    .check{
+      width:22px; height:22px; border-radius:6px;
+      background:rgba(22,163,74,.12);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--green2); font-weight:900;
+      flex:0 0 auto;
+      margin-top:2px;
+    }
+    .feat p{margin:0; color:var(--muted); font-size:14px; line-height:1.6}
+    .right{padding:18px}
+    .formHead{
+      display:flex; justify-content:space-between; align-items:flex-start; gap:12px;
+      margin-bottom:10px;
+    }
+    .formHead h2{margin:0; font-size:18px}
+    .warn{
+      background:rgba(185,28,28,.08);
+      color:var(--red);
+      border:1px solid rgba(185,28,28,.18);
+      padding:10px 12px;
+      border-radius:14px;
+      font-size:13px;
+      line-height:1.5;
+    }
+    .timerBox{
+      margin-top:10px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      border:1px dashed rgba(185,28,28,.35);
+      background:rgba(185,28,28,.06);
+      padding:10px 12px;
+      border-radius:14px;
+      color:var(--red);
+      font-size:13px;
+    }
+    .timer{
+      font-variant-numeric: tabular-nums;
+      font-weight:900;
+      background:#fff;
+      color:var(--text);
+      border:1px solid var(--border);
+      padding:8px 10px;
+      border-radius:12px;
+      min-width:112px;
+      text-align:center;
+    }
+    form{margin-top:14px}
+    label{display:block; font-size:13px; color:var(--muted); margin:0 0 6px}
+    input, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:#fff;
+      outline:none;
+      font-size:15px;
+      color:var(--text);
+    }
+    input:focus, select:focus{border-color:#86efac; box-shadow:0 0 0 4px rgba(34,197,94,.12)}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media (max-width: 520px){.row{grid-template-columns:1fr}}
+    .legal{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.6;
+    }
+    .section{
+      margin-top:18px;
+      padding:18px;
+    }
+    .section h3{margin:0 0 10px; font-size:18px}
+    .reviews{
+      display:grid; grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    }
+    @media (max-width: 900px){
+      .reviews{grid-template-columns:1fr}
+    }
+    .review{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+    }
+    .review b{display:block; margin-bottom:6px}
+    .review p{margin:0; color:var(--muted); line-height:1.7; font-size:14px}
+    footer{
+      margin:18px 0 0;
+      padding:18px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+    .miniLinks a{
+      color:var(--muted);
+      text-decoration:none;
+      border-bottom:1px dotted rgba(71,85,105,.45);
+      margin:0 6px;
+    }
+    .success{
+      display:none;
+      margin-top:12px;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(22,163,74,.25);
+      background:rgba(22,163,74,.08);
+      color:#064e3b;
+      line-height:1.6;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>تمويل تونس</div>
+      </div>
+      <div class="pill">🔒 التسجيل مجاني • تواصل في أقرب وقت ممكن</div>
+    </div>
+
+    <div class="hero">
+      <!-- LEFT: Hero Copy + Features -->
+      <div class="card">
+        <div class="heroMedia" role="img" aria-label="صورة توضيحية للتمويل عبر الهاتف">
+          <div class="badge">✅ <b>تسجيل أونلاين</b> • أقل من 3 دقايق</div>
+        </div>
+        <div class="heroBody">
+          <h1>💰 طلب تمويل سريع في تونس</h1>
+          <p class="sub">قدم طلبك أونلاين وخلّي فريق مختص يتواصل معاك في أقرب وقت ممكن لمراجعة طلب التمويل.</p>
+
+          <div class="ctaRow">
+            <a class="btn" href="#leadForm">🔥 قدم طلبك توا</a>
+            <a class="btn secondary" href="#reviews">شوف آراء الناس</a>
+          </div>
+
+          <div class="grid2" aria-label="مميزات الخدمة">
+            <div class="feat"><div class="check">✓</div><p><b>بدون تنقل</b><br>سجل من تليفونك وانت في دارك</p></div>
+            <div class="feat"><div class="check">✓</div><p><b>معالجة سريعة</b><br>مراجعة الطلبات تتم بأسرع وقت</p></div>
+            <div class="feat"><div class="check">✓</div><p><b>فورم بسيط</b><br>معلومات قليلة باش نسهلو عليك</p></div>
+            <div class="feat"><div class="check">✓</div><p><b>عدة ولايات</b><br>الخدمة متاحة في ولايات متعددة</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="card right" id="leadForm">
+        <div class="formHead">
+          <h2>📋 عبي معلوماتك باش يتم التواصل معاك</h2>
+        </div>
+
+        <div class="warn">
+          ⚠️ عدد الطلبات اليوم محدود — سجّل توا قبل ما يتسكر التسجيل.
+          <div class="timerBox">
+            <span>⏳ الوقت المتبقي:</span>
+            <span class="timer" id="timer">15:00</span>
+          </div>
+        </div>
+
+        <form id="form">
+          <div style="margin-top:12px">
+            <label for="fullName">الاسم الكامل</label>
+            <input id="fullName" name="fullName" type="text" placeholder="مثال: محمد بن علي" required />
+          </div>
+
+          <div style="margin-top:12px">
+            <label for="phone">رقم الهاتف</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="مثال: 2X XXX XXX" required />
+          </div>
+
+          <div style="margin-top:12px">
+            <label for="state">الولاية</label>
+            <select id="state" name="state" required>
+              <option value="" disabled selected>اختر الولاية</option>
+              <option>تونس</option><option>أريانة</option><option>بن عروس</option><option>منوبة</option>
+              <option>نابل</option><option>زغوان</option><option>بنزرت</option><option>باجة</option><option>جندوبة</option><option>الكاف</option><option>سليانة</option>
+              <option>سوسة</option><option>المنستير</option><option>المهدية</option><option>صفاقس</option><option>القيروان</option><option>القصرين</option><option>سيدي بوزيد</option>
+              <option>قابس</option><option>مدنين</option><option>تطاوين</option><option>قفصة</option><option>توزر</option><option>قبلي</option>
+            </select>
+          </div>
+
+          <button class="btn" type="submit" style="width:100%; margin-top:14px">🔥 أرسل الطلب الآن</button>
+
+          <p class="legal">
+            بالضغط على زر الإرسال، توافق على مشاركة معلوماتك للتواصل معك بخصوص طلب التمويل.
+          </p>
+
+          <div class="success" id="success">
+            ✅ تم استلام طلبك بنجاح. سيتم التواصل معاك في أقرب وقت ممكن.
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="card section" id="reviews">
+      <h3>💬 آراء مسجلين سابقين</h3>
+      <div class="reviews">
+        <div class="review">
+          <b>🟢 أميمة – تونس</b>
+          <p>التسجيل كان ساهل وتواصلوا معايا بسرعة.</p>
+        </div>
+        <div class="review">
+          <b>🟢 كريم – سوسة</b>
+          <p>العملية واضحة وما تاخو وقت.</p>
+        </div>
+        <div class="review">
+          <b>🟢 هاجر – صفاقس</b>
+          <p>تجربة باهية وإن شاء الله تتعاود.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="card">
+      <div class="miniLinks">
+        <a href="#" onclick="return false;">سياسة الخصوصية</a> •
+        <a href="#" onclick="return false;">شروط الاستخدام</a>
+      </div>
+      <div style="margin-top:10px">© 2026 جميع الحقوق محفوظة</div>
+    </footer>
+  </div>
+
+  <script>
+    // === CONFIG ===
+    // 1) ضع رابط صورة الهيدر هنا:
+    // استبدل HEADER_IMAGE_URL_HERE في الـ CSS أو ضع هنا ثم يتم حقنه تلقائيًا (اختياري)
+    // 2) ضع رابط استقبال الليدات (API / Google Sheets / CRM) هنا:
+    const POST_ENDPOINT = ""; // مثال: "https://your-domain.com/lead"
+
+    // === Countdown 15:00 ===
+    (function(){
+      let total = 15 * 60; // seconds
+      const el = document.getElementById('timer');
+      const tick = () => {
+        const m = String(Math.floor(total / 60)).padStart(2,'0');
+        const s = String(total % 60).padStart(2,'0');
+        el.textContent = `${m}:${s}`;
+        if (total > 0) total--;
+      };
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // === Form submit ===
+    document.getElementById('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const payload = {
+        fullName: document.getElementById('fullName').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        state: document.getElementById('state').value
+      };
+
+      // Basic validation
+      if (!payload.fullName || !payload.phone || !payload.state) return;
+
+      // إذا ما عندكش Endpoint حالياً: اعرض نجاح وهمي لتجربة الصفحة
+      if (!POST_ENDPOINT) {
+        document.getElementById('success').style.display = 'block';
+        e.target.reset();
+        return;
+      }
+
+      try {
+        const res = await fetch(POST_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error("Request failed");
+
+        document.getElementById('success').style.display = 'block';
+        e.target.reset();
+      } catch (err) {
+        alert("صار مشكل في الإرسال. جرّب مرة أخرى.");
+      }
+    });
+  </script>
+</body>
+</html>
